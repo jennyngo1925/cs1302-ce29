@@ -17,7 +17,14 @@ Group Member 2: Tiffany Chang
   vi. In the presence of cubics, the linear functions become even harder to distinguish, all blurring together as if they were one line. Again, just because we changed Y_FINAL, the rate of change
     for the linear functions remain the same, so graphically nothing has changed, but visually the spaces between the lines have pretty much disappeared. The cubic function grows significantly faster
     than the linear function.
- vii.
-viii.
-  ix.
-   x.
+ vii. In the presence of exponentials, the cubics do not seem as spaced out as they had before. This
+    is because the cubic functions grew at the fixed cubic rate (the polynomial of 3) whereas
+    the exponential function changes much more rapidly.
+viii. In the presence of exponentials, the quadratics all start to look the same as if they are all
+    mergining into one function. This is once again due to the much slower growth rate of quadratics
+    in comparison to exponential functions.
+  ix. In the presence of exponentials, the linears basically look like one line as they Y_FINAL increased so much
+    that the space between them looks as if it is no longer there. The rate of growth for a linear function
+    is fixed whereas the exponential functions' growth rate  is changing, increasing as it approaches Y_FINAL.
+   x. We think the instructors wanted us to see how the different functions behaved and which algorithms
+    are more efficient to use when trying to solve a problem.

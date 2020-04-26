@@ -75,7 +75,9 @@ public class ComplexityClasses extends Application {
                                , "Exponential");
         ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(1.5, n) + 32.0), "Exponential");
         ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(1.3, n) + n), "Exponential");
-        ChartUtility.addSeries(lc, x, genData(x, n -> 2.0 * Math.pow(1.2, n) - 0.5                                                                                * Math.pow(n, 3.0)), "Exponential");
+        ChartUtility.addSeries(lc, x, genData(x, n ->
+                                              2.0 * Math.pow(1.2, n) - 0.5 * Math.pow(n, 3.0))
+                               , "Exponential");
 
         Scene scene = new Scene(lc);
         scene.getStylesheets().add("chartStyle.css"); // use CSS to remove line symbols
