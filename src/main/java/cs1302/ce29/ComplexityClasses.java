@@ -27,7 +27,7 @@ public class ComplexityClasses extends Application {
     private static final int X_FINAL = 100; // exclusive
 
     /* Bound for the Y-axis in the line chart. */
-    private static final int Y_FINAL = 100; // inclusive
+    private static final int Y_FINAL = 10000; // inclusive
 
     /* Last Problem Size */
     private static final int N = X_FINAL - X_START;
@@ -71,6 +71,11 @@ public class ComplexityClasses extends Application {
                                , "Cubic");
         ChartUtility.addSeries(lc, x, genData(x, n -> 1.5 * Math.pow(n, 3.0) + n - 3.5), "Cubic");
         ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(n, 3.0) - 42.0), "Cubic");
+        ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(2.0, n) + Math.pow(n, 2.0))
+                               , "Exponential");
+        ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(1.5, n) + 32.0), "Exponential");
+        ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(1.3, n) + n), "Exponential");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 2.0 * Math.pow(1.2, n) - 0.5                                                                                * Math.pow(n, 3.0)), "Exponential");
 
         Scene scene = new Scene(lc);
         scene.getStylesheets().add("chartStyle.css"); // use CSS to remove line symbols
