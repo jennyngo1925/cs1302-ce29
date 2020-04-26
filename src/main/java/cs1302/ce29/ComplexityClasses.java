@@ -54,6 +54,10 @@ public class ComplexityClasses extends Application {
 
         // Add the linear time data series to the line chart
         ChartUtility.addSeries(lc, x, genData(x, n -> 1.0 * n), "Linear");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 1.0 * n + 2.0), "Linear 1.0");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 1.2 * n + 1.0), "Linear 1.2");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 1.4 * n - 1.0), "Linear 1.4");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 1.6 * n), "Linear 1.6");
 
         Scene scene = new Scene(lc);
         scene.getStylesheets().add("chartStyle.css"); // use CSS to remove line symbols
@@ -64,16 +68,16 @@ public class ComplexityClasses extends Application {
     } // start
 
     /**
-     * Creates and populates an array of {@code Double} objects using an array of 
-     * {@code Integer} objects as input. Each value in the created array is 
-     * an element of the {@code Integer} array mapped to a {@code Double} via the 
+     * Creates and populates an array of {@code Double} objects using an array of
+     * {@code Integer} objects as input. Each value in the created array is
+     * an element of the {@code Integer} array mapped to a {@code Double} via the
      * specified {@code Function} object. The elements should be mapped in order.
-     * For example, consider generating an array for the function 
+     * For example, consider generating an array for the function
      * <pre>{@code f(n) = n + 10}</pre>
      * using a call to
      * <pre>{@code genData(x, n -> n + 10.0);}</pre>
-     * where {@code x = [0, 1]}. This  would return {@code [10.0, 11.0]}. Each value in 
-     * the new array is each element in {@code x} plus {@code 10.0}, as defined by 
+     * where {@code x = [0, 1]}. This  would return {@code [10.0, 11.0]}. Each value in
+     * the new array is each element in {@code x} plus {@code 10.0}, as defined by
      * {@code f}. The new array should be the same length as {@code x}.
      *
      * @return the double array containing the mapped values
