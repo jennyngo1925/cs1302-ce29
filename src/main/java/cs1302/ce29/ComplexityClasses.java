@@ -27,7 +27,7 @@ public class ComplexityClasses extends Application {
     private static final int X_FINAL = 100; // exclusive
 
     /* Bound for the Y-axis in the line chart. */
-    private static final int Y_FINAL = 50; // inclusive
+    private static final int Y_FINAL = 100; // inclusive
 
     /* Last Problem Size */
     private static final int N = X_FINAL - X_START;
