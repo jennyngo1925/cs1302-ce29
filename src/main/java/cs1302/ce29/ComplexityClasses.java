@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 import java.util.Arrays;
 
 /**
- * A JavaFX application containing a {@code LineChart} with series for each of the following
+ * A JavaFX application containing a {@code LineChart} with series for each of the following.
  * complexity classes: <br>
  *  - Constant Time <br>
  *  - Logarithmic Time <br>
@@ -27,7 +27,7 @@ public class ComplexityClasses extends Application {
     private static final int X_FINAL = 100; // exclusive
 
     /* Bound for the Y-axis in the line chart. */
-    private static final int Y_FINAL = 100; // inclusive
+    private static final int Y_FINAL = 50; // inclusive
 
     /* Last Problem Size */
     private static final int N = X_FINAL - X_START;
@@ -36,17 +36,20 @@ public class ComplexityClasses extends Application {
     private LineChart<Number, Number> lc;
 
     /**
-     * The entry point for the JavaFX application
+     * The entry point for the JavaFX application.
+     *
+     * @param stage the stage to be presented.
      */
     public void start(Stage stage) {
 
         // Initialize the values for the x-axis (Problem Size)
-	Integer[] x = IntStream.range(X_START, X_FINAL)
-	    .mapToObj(i -> i)
-	    .toArray(Integer[]::new);
+        Integer[] x = IntStream.range(X_START, X_FINAL)
+            .mapToObj(i -> i)
+            .toArray(Integer[]::new);
 
         // Create initial line chart and add the constant time data series
-        lc = ChartUtility.createChart(x, genData(x, n -> 10.0), "Size", "Operations", Y_FINAL, "Constant");
+        lc = ChartUtility.createChart(x, genData(x, n -> 10.0), "Size", "Operations",
+                                      Y_FINAL, "Constant");
         lc.setTitle("Complexity Classes");
 
         // Add the linear time data series to the line chart
@@ -78,8 +81,11 @@ public class ComplexityClasses extends Application {
      * @param f the function to map index values to doubles
      */
     public Double[] genData(Integer[] x, Function<Integer, Double> f) {
-        // TODO: Implement Me!
-        throw new UnsupportedOperationException("genData method not yet implemented");
+        Double [] y = new Double[x.length];
+        for (int i = 0; i < x.length; i++) {
+            y[i] = f.apply(x[i]);
+        } // for
+        return y;
     } // genData
 
 } // ComplexityClasses

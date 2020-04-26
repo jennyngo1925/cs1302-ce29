@@ -12,7 +12,7 @@ import java.util.Arrays;
  * creating JavaFX line charts to allow the user to focus on the
  * contents of the chart instead of the chart creation details.
  */
-public class ChartUtility{
+public class ChartUtility {
 
     /**
      * Create a new {@code LineChart} from the provided x an y values and axis descriptors.
@@ -59,7 +59,7 @@ public class ChartUtility{
 
         XYChart.Series<Number, Number> dataSet = new XYChart.Series<>();
 
-        for(int i = 0; i < xValues.length; i++) {
+        for (int i = 0; i < xValues.length; i++) {
             XYChart.Data<Number, Number> data = new XYChart.Data<>(xValues[i], yValues[i]);
             dataSet.getData().add(data);
         } // for
