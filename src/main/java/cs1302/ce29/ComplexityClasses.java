@@ -58,6 +58,13 @@ public class ComplexityClasses extends Application {
         ChartUtility.addSeries(lc, x, genData(x, n -> 1.2 * n + 1.0), "Linear 1.2");
         ChartUtility.addSeries(lc, x, genData(x, n -> 1.4 * n - 1.0), "Linear 1.4");
         ChartUtility.addSeries(lc, x, genData(x, n -> 1.6 * n), "Linear 1.6");
+        ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(n, 2.0) + 2.0 * n - 1.0)
+                               , "Quadratic");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 2.0 * Math.pow(n, 2.0) + 1.5 * n + 2.0)
+                               , "Quadratic");
+        ChartUtility.addSeries(lc, x, genData(x, n -> 1.5 * Math.pow(n, 2.0) + 2.0 * n - 3.0)
+                               , "Quadratic");
+        ChartUtility.addSeries(lc, x, genData(x, n -> Math.pow(n, 2.0) + 42.0), "Quadratic");
 
         Scene scene = new Scene(lc);
         scene.getStylesheets().add("chartStyle.css"); // use CSS to remove line symbols
